@@ -1,0 +1,294 @@
+	/* embed new YooBee branding font */
+	/*@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i&display=swap');*/
+
+
+
+	/* For Print / PDF output */
+	@media print {
+	 #globalNavPageNavArea,
+	 .actionBar { 
+	   display: none !important; 
+	 }
+	}
+
+
+/* NAVIGATION */
+
+/*NAV - BREADCRUMBS */
+
+/*.breadcrumbs li a {
+	color: #15517E;
+}*/
+
+/*less heavy with the active links */
+.path .placeholder, 
+.simplePath .placeholder {
+    font-weight: 600;
+		color: #15517E;
+}
+
+/* NAV - SIDEBAR */
+	.listCm .courseMenu a, .buttonCm .courseMenu a {
+		padding: 0.1em 0 0.1em 30px;
+	}
+	.listCm .courseMenu a, .buttonCm .courseMenu  {
+		margin-bottom: 0.2em;
+	}
+
+
+
+
+	/* SECTIONS AND PANES */
+	#containerdiv {
+		max-width:60em;
+	}
+
+/* reorder details to place attachments at end */
+.contentList .liItem .details {
+	display:flex;
+	flex-direction: column;
+}
+.contentList .liItem .details  .contextItemDetailsHeaders{
+	order: 3;
+	border-top: dotted black 1px;
+	padding-top: 0.5em;
+	margin: 2em 0;
+}
+
+
+/*compactify attachments*/
+.attachments {
+  font-size: 0.8rem;
+}
+
+
+
+
+	/* general typographic  branding and readability*/
+	#globalNavPageContentArea * {
+		font-family: "Helvetica", Arial, sans-serif;
+		letter-spacing: 0.03em !important;
+	}
+
+	#containerdiv *:not(.mceToolbar):not(.mceLast) * {
+		font-size: 104%;
+	}
+
+	div:not(.navigationPane)  #globalNavPageContentArea *,
+	div:not(.navigationPane) p,
+  .details li {
+		line-height: 1.35em !important;
+	}
+/* desperation takes hold…*/
+	div:not(.navigationPane) p span {
+		line-height: inherit !important;
+		font-size: inherit !important;
+		letter-spacing: inherit !important;
+	}
+
+
+
+	/* TITLING */
+
+	h1#pageTitleHeader #pageTitleText {
+		font-size: 1.25em !important;
+		color:#8b8484;
+	}
+
+
+/* kill regenerated br heading tags */
+
+br + br {
+	display: none;
+	}
+
+	/* for style guide
+	Style Guide:
+	Heading
+	Sub-Heading-1
+	Sub-Heading-2
+	*/
+
+
+	h1#pageTitleHeader #pageTitleText > span {
+		font-size: 1.5em !important;
+		color:#aba8a8 !important;
+		line-height: 0.6;
+	}
+
+
+
+	/* SEMANTIC TITLING */
+
+	/* Not sure what these related to eartlier
+	#containerdiv h2 {
+		font-size: 1.6em !important;
+	}
+	#containerdiv h3 {
+		font-size: 1.4em !important;
+	}
+	#containerdiv h4 {
+		font-size: 1.2em !important;
+	}*/
+
+
+h4, h5, h6 {
+  text-transform: capitalize;
+}
+
+	/* Day Title in TinyMCE produces h3*/
+	.contentList.contentList h3, 
+	.contentPane.contentPane h3 {
+		font-size: 1.8em !important;
+		margin: 0 0 0.5em 0;
+	}
+	.contentList.contentList h3 span, 
+	.contentPane.contentPane h3 span{
+		font-size: inherit !important;
+	}
+
+
+	/* "Heading" inTinyMCE produces h4*/
+	.mceContentBody h4,
+	.contentPane h4 {
+		font-size: 2rem !important;
+		margin: 2rem 0 0.5em 0;
+	}
+
+	/* "Sub-Heading-1" inTinyMCE produces h5*/
+	.mceContentBody h5,
+	.contentPane h5 {
+		font-size: 1.6rem !important;
+		font-weight: 500;
+		margin: 1.5rem 0 0.3em 0;
+		/*color: gray;*/
+	}
+	/* "Sub-Heading-2" inTinyMCE produces h6*/
+	.mceContentBody h6,
+	.contentPane h6 {
+		font-size: 1.4rem !important;
+		font-weight: 500;
+		margin: 1rem 0 0.5rem 0;
+	}
+
+	/* tighten gaps for consecutive headings */
+	h3 + h4,
+	h4 + h5,
+	h5 + h6 {
+		margin-top: 0.25em !important;
+	}
+
+
+
+
+
+	/* LISTS */
+	.contentList ul,
+	.contentList ol {
+		padding-left: 20px;
+	}
+	/* Assert global body style */
+	.contentList .details ul,
+	.contentList .details ol,
+	.contentList .details ul.s1,
+	.contentList .details ol.s1{
+		font-size: inherit!important;
+		letter-spacing: inherit!important;
+	}
+	.contentList .details ul span,
+	.contentList .details ol span{
+		font-size: inherit !important;
+		letter-spacing: inherit!important;
+	}
+	div:not(.navigationPane) #containerdiv .details ul
+	div:not(.navigationPane) #containerdiv .details .contentList,
+.vtbegenerated ul, 
+	div:not(.navigationPane) #containerdiv .details ol
+	div:not(.navigationPane) #containerdiv .details .contentList,
+.vtbegenerated ol {
+		margin: 0 0 1em 0;
+	}
+
+/* lists to hug their preceding lead-in element
+(currently broken and hacked into preceding gen list rule ) */
+p + .vtbegenerated ul,
+h2 + .vtbegenerated ul,
+h3 + .vtbegenerated ul,
+h4 + .vtbegenerated ul,
+h5 + .vtbegenerated ul,
+p + .vtbegenerated ol,
+h2 + .vtbegenerated ol,
+h3 + .vtbegenerated ol,
+h4 + .vtbegenerated ol,
+h5 + .vtbegenerated ol {
+		margin-top: -0.5em;
+	}
+
+
+/* variation on geleral rules for?? */
+	div:not(.navigationPane) #containerdiv .details li
+	div:not(.navigationPane) #containerdiv .details .contentList li,
+.vtbegenerated ul > li,
+.vtbegenerated ol > li,
+ul.attachments > li {
+		margin-bottom: 0.3em;
+	}
+
+
+
+
+	/* IMAGES */
+	p img {
+		width: 100%;
+		max-width: 900px;		
+		height: auto;
+		margin: 0 0 2rem 0;
+	}
+
+
+/* TABLES */
+.week-ahead  {
+	min-width: none;
+	width: 100%;
+}
+.week-ahead.week-ahead.week-ahead td {
+	vertical-align: top:
+}
+
+
+/*responsively hide activities on small devices */
+@media screen and (max-width: 500px) {
+	.week-ahead td:nth-child(3) {
+	display: none;
+	}
+}
+
+.week-ahead td {
+	padding: 0.4em 0.4em 0.4em 0;
+	width: auto;
+}
+.week-ahead td:first-child {
+	text-align: center;
+	min-width: 2em;
+}
+
+.week-ahead tr:not(:first-child) td {
+	border-bottom: dotted gray 1px;
+}
+.week-ahead tr:first-child {
+	background-color: lightgray;
+}
+
+
+
+
+
+
+	/* Iconography */
+
+	/* /html/body/div[5]/div[2]/div[2]/div/div[2]/div/div[3]/form[2]/ul/li[5]/img
+	*/
+
+
+
+
